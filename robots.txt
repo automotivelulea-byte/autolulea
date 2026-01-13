@@ -1,0 +1,16 @@
+# Robots.txt for Automotive Luleå
+# https://autolulea.se
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://autolulea.se/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block sensitive directories (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
