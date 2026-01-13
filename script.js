@@ -24,17 +24,24 @@ function initNavigation() {
     const dropdowns = document.querySelectorAll('.has-dropdown');
 
     dropdowns.forEach(dropdown => {
-        // For touch devices
-        dropdown.addEventListener('click', function(e) {
-            if (window.innerWidth <= 1024) {
-                const link = this.querySelector('a');
-                const submenu = this.querySelector('.dropdown');
+        const mainLink = dropdown.querySelector(':scope > a'); // Only the direct child link (Tjänster)
 
-                if (e.target === link || link.contains(e.target)) {
+        // For touch devices - only prevent default on the main dropdown toggle
+        if (mainLink) {
+            mainLink.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
                     e.preventDefault();
-                    this.classList.toggle('active');
+                    dropdown.classList.toggle('active');
                 }
-            }
+            });
+        }
+
+        // Allow dropdown items to close the menu after clicking
+        const dropdownLinks = dropdown.querySelectorAll('.dropdown a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                dropdown.classList.remove('active');
+            });
         });
     });
 }
