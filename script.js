@@ -386,12 +386,21 @@ function initSmoothScroll() {
             const target = document.querySelector(href);
             if (target) {
                 const navHeight = document.getElementById('navbar').offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                const extraPadding = 20; // Extra space from top
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - extraPadding;
 
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+
+                // Close mobile menu if open
+                const navLinks = document.getElementById('navLinks');
+                const hamburger = document.getElementById('hamburger');
+                if (navLinks && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
             }
         });
     });
