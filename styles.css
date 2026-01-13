@@ -822,11 +822,16 @@ h4 { font-size: 1.125rem; }
 }
 
 .service-card.featured {
-    border-color: transparent;
-    box-shadow: none;
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 2px #f59e0b;
 }
 
 .service-card.active {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+.service-card.featured.active {
     border-color: var(--primary);
     box-shadow: 0 0 0 2px var(--primary);
 }
@@ -836,7 +841,7 @@ h4 { font-size: 1.125rem; }
     top: 1rem;
     right: 1rem;
     padding: 0.25rem 0.75rem;
-    background-color: var(--primary);
+    background-color: #f59e0b;
     color: var(--white);
     font-size: 0.75rem;
     font-weight: 600;
