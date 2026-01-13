@@ -1127,53 +1127,8 @@
     </footer>
 
     <!-- Chat Widget -->
-    <div class="chat-widget" id="chatWidget">
-        <button class="chat-toggle" id="chatToggle" aria-label="Öppna chatt">
-            <svg class="chat-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-            <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span class="chat-badge">1</span>
-        </button>
-
-        <div class="chat-window" id="chatWindow">
-            <div class="chat-header">
-                <div class="chat-header-info">
-                    <div class="chat-avatar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                    </div>
-                    <div class="chat-header-text">
-                        <strong>Automotive Luleå</strong>
-                        <span class="chat-status"><span class="status-dot"></span>Online nu</span>
-                    </div>
-                </div>
-                <button class="chat-minimize" id="chatMinimize" aria-label="Minimera">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </button>
-            </div>
-
-            <div class="chat-messages" id="chatMessages">
-                <div class="chat-message received">
-                    <div class="message-content">
-                        <p>Hej! 👋 Välkommen till Automotive Luleå. Hur kan vi hjälpa dig idag?</p>
-                        <span class="message-time">Just nu</span>
-                    </div>
-                </div>
-                <div class="chat-quick-replies">
-                    <button class="quick-reply" data-message="Jag vill boka en tid">Boka tid</button>
-                    <button class="quick-reply" data-message="Vad kostar en service?">Priser</button>
-                    <button class="quick-reply" data-message="Vilka öppettider har ni?">Öppettider</button>
-                </div>
-            </div>
-
-            <div class="chat-input-area">
-                <form class="chat-form" id="chatForm">
-                    <input type="text" id="chatInput" placeholder="Skriv ett meddelande..." autocomplete="off">
-                    <button type="submit" aria-label="Skicka">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- Telavox Live Chat Widget -->
+    <script src="https://customerwidget.telavox.com/tvx-customer-widget-app.js?widgetId=490d2265-89cd-4b19-b201-b589133d06a8" charset="utf-8" crossorigin="anonymous" type="text/javascript" defer></script>
 
     <!-- Floating CTA (Mobile) -->
     <div class="floating-cta" id="floatingCta">
