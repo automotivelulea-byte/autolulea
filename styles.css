@@ -822,8 +822,13 @@ h4 { font-size: 1.125rem; }
 }
 
 .service-card.featured {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.service-card.active {
     border-color: var(--primary);
-    box-shadow: 0 0 0 1px var(--primary);
+    box-shadow: 0 0 0 2px var(--primary);
 }
 
 .service-badge {

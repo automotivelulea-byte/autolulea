@@ -394,6 +394,16 @@ function initSmoothScroll() {
                     behavior: 'smooth'
                 });
 
+                // Highlight service card if clicking on a service link
+                if (target.classList.contains('service-card')) {
+                    // Remove active from all service cards
+                    document.querySelectorAll('.service-card').forEach(card => {
+                        card.classList.remove('active');
+                    });
+                    // Add active to clicked service
+                    target.classList.add('active');
+                }
+
                 // Close mobile menu if open
                 const navLinks = document.getElementById('navLinks');
                 const hamburger = document.getElementById('hamburger');
